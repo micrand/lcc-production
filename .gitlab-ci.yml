@@ -1,0 +1,9 @@
+stages:
+  - deploy
+
+deploy_development:
+  stage: deploy
+  only:
+    - development
+  script:
+    - ssh root@80.209.238.233 'bash /var/www/lcc-front/deploy.sh'
